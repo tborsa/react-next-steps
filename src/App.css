@@ -20,3 +20,17 @@
 .App-link {
   color: #09d3ac;
 }
+
+.menu {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.menu a {
+  padding: 10px;
+  color: lightslategray;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: lightblue;
+  margin: 10px;
+}
