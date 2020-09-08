@@ -1,5 +1,5 @@
-import {createContext} from 'react';
+import { createContext, useState } from 'react';
 
-const DogContext = createContext(['roofus', 'spot', 'buddy', 'fluffers']);
+const DogContext = createContext(5);
 
 export default DogContext;

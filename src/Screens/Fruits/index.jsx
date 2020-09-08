@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom';
 import Show from './Show';
 
 export default [
-  <Route key="ferret" path="/ferret">
+  <Route path="/fruits">
     <Show/>
-  </Route>
-]
+  </Route>,
+];

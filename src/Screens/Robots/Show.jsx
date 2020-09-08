@@ -1,10 +1,9 @@
 import React from 'react';
-import Bear from '../../../Components/Bear';
 
 const Show = () => {
   return (
     <div>
-      <Bear />
+      <h1> This is my awesome Robotic  🤖 </h1>
     </div>
   );
 };

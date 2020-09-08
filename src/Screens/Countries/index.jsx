@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom';
 import Show from './Show';
 
 export default [
-  <Route key="poutine" path="/poutine">
+  <Route path="/countries">
     <Show/>
-  </Route>
-]
+  </Route>,
+];

@@ -1,44 +1,38 @@
-import React, {useState} from 'react';
-import logo from './logo.svg';
-import { BrowserRouter as Router, Route, Switch, Link, useHistory} from 'react-router-dom';
-// import Pangolins from './Components/Pangolins';
-import DogContext from './Contexts/DogContext';
+import React, { useState } from 'react';
+import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
 import Screens from './Screens';
-import './App.css';             
+import DogContext from './Contexts/dogContext';
+
+import './App.css';
 
 function App() {
-  const [dogList, setDogList] = useState(['roofus', 'spot', 'fluuffers'])
+  // create a function
+  // compute a value
+  const [dogList, setDogList] = useState(['sam', 'roof', 'floof']);
   const addDog = (dog) => {
-    setDogList(dogs => ([...dogs, dog]));
+    setDogList(currentList => [...currentList, dog]);
   }
   return (
     <Router>
       <DogContext.Provider value={{dogList, addDog}}>
-        <div className="App">
-          <h1>Our page</h1>
-
-          <h2>Links</h2>
-          <div style={{display: 'flex', justifyContent: "center"}}>
-            <Link to="/cat">cat</Link>
-            <Link to="/poutine">🇨🇦Delicious POUTINE!!!🇨🇦</Link>
-            <Link to="/pangolins">Pangolin Gang</Link>
-            <Link to="/ferret">Ferrets for lyffffeeeeeee!</Link>
-            <Link to="/Bear"> 🐻🐻BEAAAAAARS 🐻🐻</Link>
-          </div>
-          <br></br>
-          
-
-
-
-
-
-          <Screens/>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <h1>Header</h1>
+          {/* Add links to your screen here */}
+          <Link to="/dogs">Dogs</Link>
+          <Link to="/garfield">Garfield</Link>
+          <Link to="/tetras">Tetras</Link>
+          <Link to="/monsters">Monsters</Link>
+          <Link to="/pikachu">Pikachu</Link>
+          <Link to="/countries">Countries</Link>
+          <Link to="/robots">Robots</Link>
+          <Link to="/fruits">fruits</Link>
         </div>
+        <Screens />
+        <h1>Footer</h1>
       </DogContext.Provider>
     </Router>
-    
-
   );
+
 }
 
 export default App;

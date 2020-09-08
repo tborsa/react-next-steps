@@ -1,27 +1,32 @@
 import React from 'react';
-import {Switch} from 'react-router-dom';
-import About from './About';
-import Cats from './Cats';
-import Poutine from './Poutine';
-import Pangolins from './Pangolins';
-import Ferrets from './Ferrets';
-import Bear from './Bear';
+import { Switch, Route } from 'react-router-dom';
+import Dogs from './Dogs';
+import Countries from './Countries';
+import Monsters from './monsters';
+import Garfield from './Garfield';
+import Pikachu from './Pikachu';
+import Fruits from './Fruits';
+import Robots from './Robots';
+import Tetras from './Tetras';
 
-const Screens = () => {
+const index = () => {
   return (
     <Switch>
       {
         [
-          ...About,
-          ...Cats,
-          ...Poutine,
-          ...Pangolins,
-          ...Ferrets,
-          ...Bear
+          // Spread out your screens sub routes here
+          ...Dogs,
+          ...Countries,
+          ...Monsters,
+          ...Garfield,
+          ...Pikachu,
+          ...Robots,
+          ...Tetras,
+          ...Fruits
         ]
       }
     </Switch>
   );
 };
 
-export default Screens;
+export default index;
