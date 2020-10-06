@@ -1,23 +1,46 @@
 import React from 'react';
-import {Switch} from 'react-router-dom';
-import About from './About';
+import { Switch } from 'react-router-dom';
 import Cats from './Cats';
-import Poutine from './Poutine';
-import Pangolins from './Pangolins';
-import Ferrets from './Ferrets';
-import Bear from './Bear';
+import Dogs from './Dogs';
+import Trees from './Trees';
+import Halloween from './Halloween';
+import Plants from './Plants';
+import NotCats from './NotCats';
+import N64 from './N64';
+// import Fruits from './fruits';
+import Fishes from './Fishes';
+import Books from './Books';
+import PS4 from './PS4';
+import Things from './Things';
+import Snails from './Snails';
+import Yooooo from './Yooooo';
+import Yoo from './Yoo'
+import Cop from './Cop';
 
 const Screens = () => {
   return (
     <Switch>
       {
         [
-          ...About,
+          // ADD SCREENS HERE ++++
           ...Cats,
-          ...Poutine,
-          ...Pangolins,
-          ...Ferrets,
-          ...Bear
+          ...Dogs,
+          ...Halloween,
+          ...Trees,
+          ...Plants,
+          ...NotCats,
+          ...N64,
+          ...NotCats,
+          ...Books,
+          ...Snails,
+          // ...Fruits,
+          ...Fishes,
+          ...PS4,
+          ...Yoo,
+          ...Things,
+          ...Yooooo,
+          ...Cop,
+          // +++++++++++++++++++++
         ]
       }
     </Switch>

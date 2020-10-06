@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Cats from '../../Components/Cats';
+import PS4 from '../../Components/PS4';
 
 export default [
-  <Route key="Cats" path="/cats">
-    <Cats />
+  <Route key="PS4" path="/PS4">
+    <PS4 />
   </Route>
 ]

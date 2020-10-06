@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Cats from '../../Components/Cats';
+import Dogs from '../../Components/Dogs';
 
 export default [
-  <Route key="Cats" path="/cats">
-    <Cats />
+  <Route key="Dogs" path="/Dogs">
+    <Dogs />
   </Route>
 ]

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Cats from '../../Components/Cats';
+import Sports from '../../Components/Sports';
 
 export default [
-  <Route key="Cats" path="/cats">
-    <Cats />
+  <Route key="aports" path="/sports">
+    <Sports />
   </Route>
 ]

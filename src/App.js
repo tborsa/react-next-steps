@@ -1,43 +1,44 @@
-import React, {useState} from 'react';
-import logo from './logo.svg';
-import { BrowserRouter as Router, Route, Switch, Link, useHistory} from 'react-router-dom';
-// import Pangolins from './Components/Pangolins';
-import DogContext from './Contexts/DogContext';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Screens from './Screens';
-import './App.css';             
+import dogContext from './Contexts/dogContext';
+
+import './App.css';
+
 
 function App() {
-  const [dogList, setDogList] = useState(['roofus', 'spot', 'fluuffers'])
-  const addDog = (dog) => {
-    setDogList(dogs => ([...dogs, dog]));
-  }
+  const [dogsList, setDogsList] = useState(['roofus', 'spots', 'scruffy']);
   return (
-    <Router>
-      <DogContext.Provider value={{dogList, addDog}}>
-        <div className="App">
-          <h1>Our page</h1>
-
-          <h2>Links</h2>
-          <div style={{display: 'flex', justifyContent: "center"}}>
-            <Link to="/cat">cat</Link>
-            <Link to="/poutine">🇨🇦Delicious POUTINE!!!🇨🇦</Link>
-            <Link to="/pangolins">Pangolin Gang</Link>
-            <Link to="/ferret">Ferrets for lyffffeeeeeee!</Link>
-            <Link to="/Bear"> 🐻🐻BEAAAAAARS 🐻🐻</Link>
-          </div>
-          <br></br>
-          
-
-
-
-
-
-          <Screens/>
+    <dogContext.Provider value={{dogsList, setDogsList}}>
+      <Router>
+        <h1>App</h1>
+        {/* Add Links Here ++++++  NAV*/}
+        <div style={{ display: 'flex', margin: '20px', width: '100%', justifyContent: 'space-around' }}>
+          <Link to="/dogs">Dogs</Link>
+          <Link to="/cats">cats</Link>
+          <Link to="/halloween">Halloween</Link>
+          <Link to="/fishes">Fishes</Link>
+          <Link to="/trees">Trees</Link>
+          <Link to="/books">Books</Link>
+          <Link to="/PS4">PS4</Link>
+          <Link to="/emoji">emoji</Link>
+          <Link to="/notcats">notcats</Link>
+          <Link to="/snails">SNAILS</Link>
+          <Link to="/fruits">Fruits</Link>
+          <Link to="/n64">N64</Link>
+          <Link to="/Things">Things</Link>
+          <Link to="/Plants">Plants</Link>
+          <Link to="/Cop">Cop</Link>
         </div>
-      </DogContext.Provider>
-    </Router>
-    
+        {/* +++++++++++++++++++++++ */}
 
+        <div style={{ padding: '100px' }}>
+          <Screens />
+        </div>
+
+        {/* FOOTER */}
+      </Router>
+    </dogContext.Provider>
   );
 }
 
